@@ -1,0 +1,7 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.158",
+        "php-ffmpeg/php-ffmpeg": "^0.18.0",
+        "google/cloud-pubsub": "^1.30"
+    }
+}
