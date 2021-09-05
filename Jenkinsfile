@@ -15,6 +15,10 @@ pipeline {
 
         }
         stage('Build') {
+            when {
+                branch 'develop'
+            }
+
             steps {
                 sh 'echo Build'
             }
