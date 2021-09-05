@@ -15,10 +15,7 @@ pipeline {
 
         }
         stage('Build') {
-            when {
-                branch allOf { 'master' }
-            }
-
+            when { branch 'master' }
             steps {
                 sh 'echo Build'
             }
