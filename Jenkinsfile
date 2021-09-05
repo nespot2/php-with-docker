@@ -14,9 +14,18 @@ pipeline {
                     }
 
         }
-        stage('Build') {
+        stage('Build develop') {
+                    when { branch 'develop' }
+                    steps {
+                        sh 'echo build develop'
+                    }
+        }
+
+
+        stage('Build master') {
+            when { branch 'master' }
             steps {
-                sh 'echo Build'
+                sh 'echo build master'
             }
         }
     }
