@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             when {
-                branch 'master'
+                branch allOf { 'master' }
             }
 
             steps {
