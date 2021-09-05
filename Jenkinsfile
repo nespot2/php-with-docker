@@ -8,11 +8,16 @@ pipeline {
                 }
             }
         }
+         stage('Test') {
+                    steps {
+                        sh 'echo Test'
+                    }
+
+        }
         stage('Build') {
             steps {
-                sh 'echo hahaha'
+                sh 'echo Build'
             }
-
         }
     }
 }
