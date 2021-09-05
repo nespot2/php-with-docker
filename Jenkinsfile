@@ -9,19 +9,17 @@ pipeline {
             }
         }
          stage('Test') {
-                    steps {
-                        sh 'echo Test'
-                    }
+            steps {
+                sh 'echo Test'
+            }
 
         }
         stage('Build develop') {
-                    when { branch 'develop' }
-                    steps {
-                        sh 'echo build develop'
-                    }
+            when { branch 'develop' }
+            steps {
+                sh 'echo build develop'
+            }
         }
-
-
         stage('Build master') {
             when { branch 'master' }
             steps {
