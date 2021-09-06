@@ -1,11 +1,12 @@
 pipeline {
     agent any
-    withAWS(credentials:'nespot2-credentials', region: 'ap-northeast-2') {
+
         stages {
             stage('Example') {
                 steps {
-
-                    sh 'aws ecr get-login-password --region ap-northeast-2'
+                    withAWS(credentials:'nespot2-credentials', region: 'ap-northeast-2') {
+                        sh 'aws ecr get-login-password --region ap-northeast-2'
+                    }
                 }
             }
              stage('Test') {
@@ -27,5 +28,4 @@ pipeline {
                 }
             }
         }
-    }
 }
